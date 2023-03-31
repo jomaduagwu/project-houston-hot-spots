@@ -1,78 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Houston Hot Spots</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&family=Merriweather:wght@700&display=swap"
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Houston Hot Spots</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&family=Merriweather:wght@700&display=swap"
     rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
-    />
-    <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+  <link rel="stylesheet" href="./assets/style.css">
 </head>
+
 <body>
-    <div class="flex-row align-center justify-center min-100-vh bg-primary">
-        <div class="col-12 col-md-9 flex-column align-center bg-light p-5">
-          <h1 class="text-primary">Houston Hot Spots</h1>
-          <nav>
-            <ul>
-                <li><a href="Home">Home</a></li>
-                <li><a href="About">About</a></li>
-                <li><a href="Top Attractions">Top Attractions</a></li>
-             </ul>
-          </nav>
-          <form id="search-form" class="form w-100">
-            <input id="search-input" class="form-input w-100" type="text" placeholder="Search!">
-            <select id="option-input" class="form-input w-100">
-              <option value="" disabled selected>Select an option...</option>
-              <option value="food">Food</option>
-              <option value="bars">Bars</option>
-              <option value="events">Events</option>
-              <option value="parks">Parks</option>
-              <option value="shopping">Shopping</option>
-              <option value="hotels">Hotels</option>
-              <option value="attractions">Attractions</option>
-              <option value="things-to-do">Things To Do</option>
-            </select>
-            <button class="btn btn-info btn-block">Search</button>
-          </form>
+  <div class="hero header">
+    <div class="hero-body">
+      <nav class="navbar-end is-fixed-top">
+        <ul>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#top-attractions">Top Attractions</a></li>
+        </ul>
+      </nav>
+      <h1 class="is-size-1">Houston Hot Spots</h1>
+
+    </div>
+  </div>
+  <div class="column is-4 block">
+    <form id="search-form" class="control is-small">
+      <div class="form-label">
+        <p class="is-size-3">The fun starts HERE</p>
+      </div>
+      <div class="control block">
+        <input id="search-input" class="input" type="text" placeholder="Search!">
+      </div>
+      <div class="control block">
+        <div class="select">
+          <select>
+            <option>Select dropdown</option>
+            <option value="food">Food</option>
+            <option value="bars">Bars</option>
+            <option value="events">Events</option>
+            <option value="parks">Parks</option>
+            <option value="sports">Sports</option>
+            <option value="shopping">Shopping</option>
+            <option value="hotels">Hotels</option>
+            <option value="attractions">Attractions</option>
+            <option value="things-to-do">Things To Do</option>
+          </select>
         </div>
       </div>
-      <div class="about">
-        <h2>About</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-            et dolore magna aliqua. Vulputate mi sit amet mauris commodo. Tempus egestas sed sed risus pretium. 
-            Consectetur libero id faucibus nisl tincidunt. Sit amet luctus venenatis lectus magna fringilla urna 
-            porttitor rhoncus. Nam aliquam sem et tortor. Lacus suspendisse faucibus interdum posuere lorem. Amet 
-            purus gravida quis blandit turpis. Sagittis vitae et leo duis ut diam quam nulla porttitor. Ut sem 
-            nulla pharetra diam sit amet nisl suscipit. Eu non diam phasellus vestibulum lorem sed risus ultricies. 
-            Etiam sit amet nisl purus in mollis nunc sed. Nulla facilisi morbi tempus iaculis urna. Sit amet nisl 
-            purus in mollis nunc sed id semper.</p>
-      </div>
-      <div class="attractions">
-        <h2>Top Attractions</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-            dolore magna aliqua. Quis viverra nibh cras pulvinar mattis nunc sed. Cursus eget nunc scelerisque 
-            viverra mauris in aliquam sem fringilla. Viverra tellus in hac habitasse platea dictumst. Vel elit 
-            scelerisque mauris pellentesque pulvinar pellentesque habitant. Ante metus dictum at tempor commodo 
-            ullamcorper a. Adipiscing vitae proin sagittis nisl rhoncus. Venenatis tellus in metus vulputate. 
-            Nulla aliquet enim tortor at auctor urna nunc id. Ultrices vitae auctor eu augue ut lectus arcu bibendum. 
-            Proin sagittis nisl rhoncus mattis rhoncus urna. </p>
 
-        <p>A lacus vestibulum sed arcu non odio. Accumsan tortor posuere ac ut. Tincidunt eget nullam non nisi. 
-            Ornare massa eget egestas purus viverra accumsan in nisl. Urna nunc id cursus metus aliquam. Porta 
-            lorem mollis aliquam ut porttitor leo a diam. Potenti nullam ac tortor vitae. Faucibus a pellentesque 
-            sit amet porttitor eget. Dui nunc mattis enim ut tellus. Pharetra sit amet aliquam id diam. Eu turpis 
-            egestas pretium aenean. Sapien faucibus et molestie ac feugiat sed. Gravida quis blandit turpis cursus 
-            in. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum integer. Dictum at tempor commodo 
-            ullamcorper.</p>
+      <div class="control">
+        <button class="button is-info">Submit</button>
       </div>
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="./assets/index.js"></script>    
+    </form>
+
+  </div>
+  <container class="columns pt-4">
+    <div class="about column is-one-half">
+      <h2 id="about" class="is-size-3 has-text-weight-bold">About</h2>
+      <p class="is-size-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore
+        et dolore magna aliqua. Vulputate mi sit amet mauris commodo. Tempus egestas sed sed risus pretium.
+        Consectetur libero id faucibus nisl tincidunt. Sit amet luctus venenatis lectus magna fringilla urna
+        porttitor rhoncus. Nam aliquam sem et tortor. Lacus suspendisse faucibus interdum posuere lorem. Amet
+        purus gravida quis blandit turpis. Sagittis vitae et leo duis ut diam quam nulla porttitor. Ut sem
+        nulla pharetra diam sit amet nisl suscipit. Eu non diam phasellus vestibulum lorem sed risus ultricies.
+        Etiam sit amet nisl purus in mollis nunc sed. Nulla facilisi morbi tempus iaculis urna. Sit amet nisl
+        purus in mollis nunc sed id semper.</p>
+    </div>
+    <div id="top-attractions" class="attractions column is-one-third">
+      <h2 class="is-size-3 has-text-weight-bold">Top Attractions</h2>
+      <p class="is-size-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et
+        dolore magna aliqua. Quis viverra nibh cras pulvinar mattis nunc sed. Cursus eget nunc scelerisque
+        viverra mauris in aliquam sem fringilla. Viverra tellus in hac habitasse platea dictumst. Vel elit
+        scelerisque mauris pellentesque pulvinar pellentesque habitant. Ante metus dictum at tempor commodo
+        ullamcorper a. Adipiscing vitae proin sagittis nisl rhoncus. Venenatis tellus in metus vulputate.
+        Nulla aliquet enim tortor at auctor urna nunc id. Ultrices vitae auctor eu augue ut lectus arcu bibendum.
+        Proin sagittis nisl rhoncus mattis rhoncus urna. </p>
+
+      <p class="is-size-4">A lacus vestibulum sed arcu non odio. Accumsan tortor posuere ac ut. Tincidunt eget nullam
+        non nisi.
+        Ornare massa eget egestas purus viverra accumsan in nisl. Urna nunc id cursus metus aliquam. Porta
+        lorem mollis aliquam ut porttitor leo a diam. Potenti nullam ac tortor vitae. Faucibus a pellentesque
+        sit amet porttitor eget. Dui nunc mattis enim ut tellus. Pharetra sit amet aliquam id diam. Eu turpis
+        egestas pretium aenean. Sapien faucibus et molestie ac feugiat sed. Gravida quis blandit turpis cursus
+        in. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum integer. Dictum at tempor commodo
+        ullamcorper.</p>
+    </div>
+  </container>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="./assets/index.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,26 @@
+body {
+    background-color: #EC9B3B;
+    
+}
+
+h1 {
+    color: #F24C4C;
+    text-align: center;
+}
+
+h2 {
+    color: black;
+}
+
+.header {
+    background-color: #00235B;
+}
+
+.form-label {
+    color: black;
+}
+
+#search-form {
+    background-color: #F24C4C;
+}
+

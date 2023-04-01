@@ -25,7 +25,7 @@
       </nav> -->
       <div id="navbarMenuHeroA" class="navbar-menu">
         <div class="navbar-end">
-          <a class="navbar-item is-active" href="#Home">
+          <a class="navbar-item is-active" href="#home">
             Home
           </a>
           <a class="navbar-item" href="#about">
@@ -41,7 +41,7 @@
 
     </div>
   </div>
-  <div class="column is-4 block">
+  <div class="column is-4 block" id="home">
     <form id="search-form" class="control is-small">
       <div class="form-label">
         <p class="is-size-3">The fun starts HERE</p>
@@ -75,13 +75,13 @@
             <option value="attractions">Attractions</option>
             <option value="things-to-do">Things To Do</option>
           </select> -->
-          <div class="control">
+          <div class="control" id="user-choices">
             <label class="radio user-select">
               <input type="checkbox" name="food">
               Food
             </label>
             <label class="radio user-select">
-              <input type="checkbox" name="Bars">
+              <input type="checkbox" name="bars">
               Bars
             </label>
             <label class="radio user-select">
@@ -117,7 +117,7 @@
       </div>
 
       <div class="control">
-        <button class="button is-info">Submit</button>
+        <button class="button is-info" id="submit-btn">Submit</button>
       </div>
     </form>
 

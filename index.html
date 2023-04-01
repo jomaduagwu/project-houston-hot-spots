@@ -16,14 +16,28 @@
 <body>
   <div class="hero header">
     <div class="hero-body">
-      <nav class="navbar-end is-fixed-top">
-        <ul>
+      <!-- <nav class="navbar-end is-fixed-top level">
+        <ul class="level-right nav-list">
           <li><a href="#Home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#top-attractions">Top Attractions</a></li>
         </ul>
-      </nav>
-      <h1 class="is-size-1">Houston Hot Spots</h1>
+      </nav> -->
+      <div id="navbarMenuHeroA" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item is-active" href="#Home">
+            Home
+          </a>
+          <a class="navbar-item" href="#about">
+            About
+          </a>
+          <a class="navbar-item" href="#top-attractions">
+            Top Attractions
+          </a>
+          
+        </div>
+      </div>
+      <h1 class="is-size-1 level-center">Houston Hot Spots</h1>
 
     </div>
   </div>
@@ -32,13 +46,25 @@
       <div class="form-label">
         <p class="is-size-3">The fun starts HERE</p>
       </div>
-      <div class="control block">
-        <input id="search-input" class="input" type="text" placeholder="Search!">
+      <!-- <div class="control block">
+        <input id="datepicker" class="input" type="text" placeholder="MM/DD/YYYY">
+      </div> -->
+      <div class="select user-locate">
+        <select>
+          <option>What part of town are you going to?</option>
+          <option value="central">Central Houston</option>
+          <option value="north">North Houston</option>
+          <option value="west">West Houston</option>
+          <option value="south">South Houston</option>
+          <option value="east">East Houston</option>
+          <option value="galveston">Galveston</option>
+        </select>
       </div>
+
       <div class="control block">
-        <div class="select">
-          <select>
-            <option>Select dropdown</option>
+        <div class="">
+          <!-- <select>
+            <option>What are you looking for?</option>
             <option value="food">Food</option>
             <option value="bars">Bars</option>
             <option value="events">Events</option>
@@ -48,7 +74,45 @@
             <option value="hotels">Hotels</option>
             <option value="attractions">Attractions</option>
             <option value="things-to-do">Things To Do</option>
-          </select>
+          </select> -->
+          <div class="control">
+            <label class="radio user-select">
+              <input type="checkbox" name="food">
+              Food
+            </label>
+            <label class="radio user-select">
+              <input type="checkbox" name="Bars">
+              Bars
+            </label>
+            <label class="radio user-select">
+              <input type="checkbox" name="events">
+              Events
+            </label>
+            <label class="radio user-select">
+              <input type="checkbox" name="parks">
+              Parks
+            </label>
+            <label class="radio user-select">
+              <input type="checkbox" name="sports">
+              Sports
+            </label>
+            <label class="radio user-select">
+              <input type="checkbox" name="shopping">
+              Shopping
+            </label>
+            <label class="radio user-select">
+              <input type="checkbox" name="hotels">
+              Hotels
+            </label>
+            <label class="radio user-select">
+              <input type="checkbox" name="attractions">
+              Attractions
+            </label>
+            <label class="radio user-select">
+              <input type="checkbox" name="things-to-do">
+              Things to do
+            </label>
+          </div>
         </div>
       </div>
 

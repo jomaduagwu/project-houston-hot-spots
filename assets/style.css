@@ -1,10 +1,19 @@
+
+/* colorhunt palette https://colorhunt.co/palette/293462f24c4cec9b3bf7d716 */
+:root {
+    --blue: #00235B;
+    --orange: #EC9B3B;
+    --red: #F24C4C;
+    --yellow: #F7D716;
+}
+
 body {
-    background-color: #EC9B3B;
+    background-color: var(--orange);
     
 }
 
 h1 {
-    color: #F24C4C;
+    color: var(--red);
     text-align: center;
 }
 
@@ -13,7 +22,7 @@ h2 {
 }
 
 .header {
-    background-color: #00235B;
+    background-color: var(--blue);
 }
 
 .form-label {
@@ -21,6 +30,19 @@ h2 {
 }
 
 #search-form {
-    background-color: #F24C4C;
+    background-color: var(--red);
 }
+
+#result-list {
+    text-decoration: none;
+}
+
+.user-locate {
+    margin-bottom: 1.3rem;
+}
+
+.nav-list li {
+    padding: 0, 1rem;
+}
+
 

@@ -35,9 +35,10 @@ submitBtn.addEventListener('submit', function(event) {
        selected.push(checkBox[i].name);
         
        } 
+      
      }
     
-    
+     console.log(selected);
     
     
     

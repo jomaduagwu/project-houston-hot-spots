@@ -1,9 +1,10 @@
-var searchTerm = 'cultural';
+
 var submitBtn = document.querySelector('#submit-btn');
 var userChoices = document.querySelector('#user-choices');
 var checkBox = document.querySelectorAll('input');
 checkBox.type = 'checkbox';
 var selected = [];
+var searchTerm = selected.join();
 // open trip
 apiKey = '5ae2e3f221c38a28845f05b6fc7cd900dbdfe52e778e3a8d9a518c53'
 // open trip
@@ -24,16 +25,17 @@ submitBtn.addEventListener('click', function(event) {
     for (i=0; i < 9; i++) {
        if (checkBox[i].checked) {
         selected.push(checkBox[i].name);
-    
+        
        } 
     }
-    selected = selected.join();
     
-    console.log('user choice');
+    
+    
     console.log(selected);
+    
 });
 
-  
+//   getData();
 function getData() {
 fetch(openTrip) 
     .then(function (response) {

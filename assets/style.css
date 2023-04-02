@@ -49,4 +49,9 @@ h2 {
     color: white;
 }
 
+.footer {
+    background-color: var(--blue);
+    color: white;
+}
+
 

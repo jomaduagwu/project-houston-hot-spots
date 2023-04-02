@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&family=Merriweather:wght@700&display=swap"
     rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/17efdc2a28.js" crossorigin="anonymous"></script>  
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
   <link rel="stylesheet" href="./assets/style.css">
 </head>
@@ -50,8 +51,8 @@
         <input id="datepicker" class="input" type="text" placeholder="MM/DD/YYYY">
       </div> -->
       <div class="select user-locate">
-        <select>
-          <option>What part of town are you going to?</option>
+        <select id="drop-down">
+          <option value="">What part of town are you going to?</option>
           <option value="central">Central Houston</option>
           <option value="north">North Houston</option>
           <option value="west">West Houston</option>
@@ -122,40 +123,54 @@
     </form>
 
   </div>
-  <container class="columns pt-4">
-    <div class="about column is-one-half">
-      <h2 id="about" class="is-size-3 has-text-weight-bold">About</h2>
-      <p class="is-size-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore
-        et dolore magna aliqua. Vulputate mi sit amet mauris commodo. Tempus egestas sed sed risus pretium.
-        Consectetur libero id faucibus nisl tincidunt. Sit amet luctus venenatis lectus magna fringilla urna
-        porttitor rhoncus. Nam aliquam sem et tortor. Lacus suspendisse faucibus interdum posuere lorem. Amet
-        purus gravida quis blandit turpis. Sagittis vitae et leo duis ut diam quam nulla porttitor. Ut sem
-        nulla pharetra diam sit amet nisl suscipit. Eu non diam phasellus vestibulum lorem sed risus ultricies.
-        Etiam sit amet nisl purus in mollis nunc sed. Nulla facilisi morbi tempus iaculis urna. Sit amet nisl
-        purus in mollis nunc sed id semper.</p>
+  <container class="pt-4">
+    <div class="columns">
+      <div class="about column is-one-half">
+        <h2 id="about" class="is-size-3 has-text-weight-bold">About</h2>
+        <p class="is-size-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore
+          et dolore magna aliqua. Vulputate mi sit amet mauris commodo. Tempus egestas sed sed risus pretium.
+          Consectetur libero id faucibus nisl tincidunt. Sit amet luctus venenatis lectus magna fringilla urna
+          porttitor rhoncus. Nam aliquam sem et tortor. Lacus suspendisse faucibus interdum posuere lorem. Amet
+          purus gravida quis blandit turpis. Sagittis vitae et leo duis ut diam quam nulla porttitor. Ut sem
+          nulla pharetra diam sit amet nisl suscipit. Eu non diam phasellus vestibulum lorem sed risus ultricies.
+          Etiam sit amet nisl purus in mollis nunc sed. Nulla facilisi morbi tempus iaculis urna. Sit amet nisl
+          purus in mollis nunc sed id semper.</p>
+      </div>
+      <div class="column p-6">
+        <img src="./assets/images/skyline-TESTONLY.jpeg" alt="Houston-skyline">
+      </div>
     </div>
-    <div id="top-attractions" class="attractions column is-one-third">
-      <h2 class="is-size-3 has-text-weight-bold">Top Attractions</h2>
-      <p class="is-size-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et
-        dolore magna aliqua. Quis viverra nibh cras pulvinar mattis nunc sed. Cursus eget nunc scelerisque
-        viverra mauris in aliquam sem fringilla. Viverra tellus in hac habitasse platea dictumst. Vel elit
-        scelerisque mauris pellentesque pulvinar pellentesque habitant. Ante metus dictum at tempor commodo
-        ullamcorper a. Adipiscing vitae proin sagittis nisl rhoncus. Venenatis tellus in metus vulputate.
-        Nulla aliquet enim tortor at auctor urna nunc id. Ultrices vitae auctor eu augue ut lectus arcu bibendum.
-        Proin sagittis nisl rhoncus mattis rhoncus urna. </p>
-
-      <p class="is-size-4">A lacus vestibulum sed arcu non odio. Accumsan tortor posuere ac ut. Tincidunt eget nullam
-        non nisi.
-        Ornare massa eget egestas purus viverra accumsan in nisl. Urna nunc id cursus metus aliquam. Porta
-        lorem mollis aliquam ut porttitor leo a diam. Potenti nullam ac tortor vitae. Faucibus a pellentesque
-        sit amet porttitor eget. Dui nunc mattis enim ut tellus. Pharetra sit amet aliquam id diam. Eu turpis
-        egestas pretium aenean. Sapien faucibus et molestie ac feugiat sed. Gravida quis blandit turpis cursus
-        in. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum integer. Dictum at tempor commodo
-        ullamcorper.</p>
-    </div>
+    <div class="columns">
+        <div class="column">
+          <img src="./assets/images/galleriaTESTONLY.jpeg" alt="Galleria">
+        </div>
+        <div id="top-attractions" class="attractions column is-one-half p-6">
+          <h2 class="is-size-3 has-text-weight-bold">Top Attractions</h2>
+          <p class="is-size-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et
+            dolore magna aliqua. Quis viverra nibh cras pulvinar mattis nunc sed. Cursus eget nunc scelerisque
+            viverra mauris in aliquam sem fringilla. Viverra tellus in hac habitasse platea dictumst. Vel elit
+            scelerisque mauris pellentesque pulvinar pellentesque habitant. Ante metus dictum at tempor commodo
+            ullamcorper a. Adipiscing vitae proin sagittis nisl rhoncus. Venenatis tellus in metus vulputate.
+            Nulla aliquet enim tortor at auctor urna nunc id. Ultrices vitae auctor eu augue ut lectus arcu bibendum.
+            Proin sagittis nisl rhoncus mattis rhoncus urna. </p>
+    
+          <p class="is-size-4">A lacus vestibulum sed arcu non odio. Accumsan tortor posuere ac ut. Tincidunt eget nullam
+            non nisi.
+            Ornare massa eget egestas purus viverra accumsan in nisl. Urna nunc id cursus metus aliquam. Porta
+            lorem mollis aliquam ut porttitor leo a diam. Potenti nullam ac tortor vitae. Faucibus a pellentesque
+            sit amet porttitor eget. Dui nunc mattis enim ut tellus. Pharetra sit amet aliquam id diam. Eu turpis
+            egestas pretium aenean. Sapien faucibus et molestie ac feugiat sed. Gravida quis blandit turpis cursus
+            in. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum integer. Dictum at tempor commodo
+            ullamcorper.</p>
+        </div>
+      </div>  
   </container>
+  <footer class="footer has-text-centered">
+    <p>Copyright©️ 2023 team1</p>
+    <i class="fa-brands fa-github"></i>
+  </footer>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="./assets/index.js"></script>

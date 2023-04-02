@@ -5,6 +5,7 @@ var checkBox = document.querySelectorAll('input');
 checkBox.type = 'checkbox';
 var selected = [];
 var searchTerm = selected.join();
+dropDown = document.querySelector('#drop-down');
 // open trip
 apiKey = '5ae2e3f221c38a28845f05b6fc7cd900dbdfe52e778e3a8d9a518c53'
 // open trip
@@ -18,20 +19,27 @@ openTrip = 'https://api.opentripmap.com/0.1/en/places/radius?radius=32186&lon=-9
 // $( function() {
 //     $( "#datepicker" ).datepicker();
 //   } );
+
+
 // checkbox query
-submitBtn.addEventListener('click', function(event) {
-    event.preventDefault;
+submitBtn.addEventListener('submit', function(event) {
+     event.preventDefault;
+     var userDrop = dropDown.selected.value;
+    var location = "";
+    location = userDrop;
+    console.log(location);
+    
     selected = [];
     for (i=0; i < 9; i++) {
        if (checkBox[i].checked) {
-        selected.push(checkBox[i].name);
+       selected.push(checkBox[i].name);
         
        } 
-    }
+     }
     
     
     
-    console.log(selected);
+    
     
 });
 

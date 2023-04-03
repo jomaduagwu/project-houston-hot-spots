@@ -22,11 +22,10 @@ openTrip = 'https://api.opentripmap.com/0.1/en/places/radius?radius=32186&lon=-9
 
 
 // checkbox query
-submitBtn.addEventListener('submit', function(event) {
-     event.preventDefault;
-     var userDrop = dropDown.selected.value;
-    var location = "";
-    location = userDrop;
+submitBtn.addEventListener('click', function(event) {
+     event.preventDefault();
+    //  var userDrop = dropDown.value;
+    var location = dropDown.value;
     console.log(location);
     
     selected = [];
@@ -35,11 +34,10 @@ submitBtn.addEventListener('submit', function(event) {
        selected.push(checkBox[i].name);
         
        } 
-      
+       
      }
     
-     console.log(selected);
-    
+     console.log(selected.join());
     
     
 });

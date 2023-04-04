@@ -16,6 +16,20 @@
 
 <body>
   <div class="hero header">
+    <div id="navbarMenuHeroA" class="navbar-menu">
+      <nav class="navbar-end">
+        <a class="navbar-item" href="#home">
+          Home
+        </a>
+        <a class="navbar-item" href="#about">
+          About
+        </a>
+        <a class="navbar-item" href="#top-attractions">
+          Top Attractions
+        </a>
+        
+      </nav>
+    </div>
     <div class="hero-body">
       <!-- <nav class="navbar-end is-fixed-top level">
         <ul class="level-right nav-list">
@@ -24,25 +38,12 @@
           <li><a href="#top-attractions">Top Attractions</a></li>
         </ul>
       </nav> -->
-      <div id="navbarMenuHeroA" class="navbar-menu">
-        <div class="navbar-end">
-          <a class="navbar-item" href="#home">
-            Home
-          </a>
-          <a class="navbar-item" href="#about">
-            About
-          </a>
-          <a class="navbar-item" href="#top-attractions">
-            Top Attractions
-          </a>
-          
-        </div>
-      </div>
+     
       <h1 class="is-size-1 level-center">Houston Hot Spots</h1>
 
     </div>
   </div>
-  <div>
+  <div class="columns p-3 is-flex-direction-row is-justify-content-space-around">
     <div class="column is-4 block" id="home">
       <form id="search-form" class="control is-small">
         <div class="form-label">
@@ -91,7 +92,7 @@
                 Museums
               </label>
               <label class="radio user-select">
-                <input type="checkbox" name="urban_enviornment">
+                <input type="checkbox" name="urban_environment">
                 Parks
               </label>
               <label class="radio user-select">
@@ -120,13 +121,18 @@
 
         <div class="control">
           <button class="button is-info" id="submit-btn">Submit</button>
+          
+        </div>
+        <div id="results">
+
         </div>
       </form>
 
     </div>
-    <div id="results">
-
+    <div class="weather-box">
+      <img src="./assets/images/weather_placeholder.png" alt="">
     </div>
+    
   </div>  
   <container class="pt-4">
     <div class="columns p-3">
@@ -142,15 +148,25 @@
           Etiam sit amet nisl purus in mollis nunc sed. Nulla facilisi morbi tempus iaculis urna. Sit amet nisl
           purus in mollis nunc sed id semper.</p>
       </div>
-      <div class="column">
-        <img src="./assets/images/skyline-TESTONLY.jpeg" alt="Houston-skyline">
-        <figcaption>The beautiful Houston skyline</figcaption>
+      <div class="column skyline">
+        <p><a href="https://commons.wikimedia.org/wiki/File:Buildings-city-houston-skyline-1870617.jpg#/media/File:Buildings-city-houston-skyline-1870617.jpg">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Buildings-city-houston-skyline-1870617.jpg/1200px-Buildings-city-houston-skyline-1870617.jpg" alt="Buildings-city-houston-skyline-1870617.jpg"></a>
+          <figcaption>The beautiful Houston skyline</figcaption>
+          <p>By Jason Villanueva - <a rel="nofollow" class="external free" href="https://www.pexels.com/photo/buildings-city-houston-skyline-1870617/">link</a>, 
+          <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" title="Creative Commons Zero, Public Domain Dedication">CC0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=87896226">Link</a></p>
+        <!-- <img src="./assets/images/skyline-TESTONLY.jpeg" alt="Houston-skyline">
+        <figcaption>The beautiful Houston skyline</figcaption> -->
       </div>
     </div>
     <div class="columns p-2">
-        <div class="column image-with-caption">
-          <img src="./assets/images/galleriaTESTONLY.jpeg" alt="Galleria">
-          <figcaption>Lots of shopping opportunities in Htown</figcaption>
+        <div class="column galleria">
+          <p><a href="https://commons.wikimedia.org/wiki/File:GalleriaPolarIce.jpg#/media/File:GalleriaPolarIce.jpg">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/GalleriaPolarIce.jpg/1200px-GalleriaPolarIce.jpg" alt="GalleriaPolarIce.jpg"></a>
+            <figcaption>Ice skating at the Galleria</figcaption>
+            <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, 
+            <a href="https://commons.wikimedia.org/w/index.php?curid=99490039">Link</a></p>
+          <!-- <img src="./assets/images/galleriaTESTONLY.jpeg" alt="Galleria">
+          <figcaption>Lots of shopping opportunities in Htown</figcaption> -->
         </div>
         <div id="top-attractions" class="attractions column is-one-half p-6">
           <h2 class="is-size-3 has-text-weight-bold">Top Attractions</h2>
@@ -175,7 +191,7 @@
       </div>  
   </container>
   <footer class="footer has-text-centered">
-    <p>Copyright©️ 2023 team1</p>
+    <p>&copy;Copyright© 2023 team1</p>
     <i class="fa-brands fa-github"></i>
   </footer>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

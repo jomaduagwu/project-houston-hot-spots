@@ -54,4 +54,15 @@ h2 {
     color: white;
 }
 
+/* .weather-box {
+    padding-left: 18rem;
+} */
 
+.galleria {
+    max-width: 40%;
+    margin-top: 60px;
+}
+
+.skyline {
+    margin-top: 60px;
+}

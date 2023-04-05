@@ -9,7 +9,7 @@
 
 body {
     background-color: var(--orange);
-    
+    font-family: 'Roboto', serif;
 }
 
 h1 {
@@ -54,9 +54,24 @@ h2 {
     color: white;
 }
 
+<<<<<<< HEAD
 #map {
     height: 400px;
     width: 100%;
 }
 
+=======
+/* .weather-box {
+    padding-left: 18rem;
+} */
+
+.galleria {
+    max-width: 40%;
+    margin-top: 60px;
+}
+
+.skyline {
+    margin-top: 60px;
+}
+>>>>>>> 5845f26e6d4ed4090c662fd93d8b3f1b2e341dda
 

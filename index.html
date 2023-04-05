@@ -7,8 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Houston Hot Spots</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&family=Merriweather:wght@700&display=swap"
-    rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet" />
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&family=Merriweather:wght@700&display=swap"
+    rel="stylesheet" /> -->
   <script src="https://kit.fontawesome.com/17efdc2a28.js" crossorigin="anonymous"></script>  
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
   <link rel="stylesheet" href="./assets/style.css">
@@ -16,6 +17,20 @@
 
 <body>
   <div class="hero header">
+    <div id="navbarMenuHeroA" class="navbar-menu">
+      <nav class="navbar-end">
+        <a class="navbar-item" href="#home">
+          Home
+        </a>
+        <a class="navbar-item" href="#about">
+          About
+        </a>
+        <a class="navbar-item" href="#top-attractions">
+          Top Attractions
+        </a>
+        
+      </nav>
+    </div>
     <div class="hero-body">
       <!-- <nav class="navbar-end is-fixed-top level">
         <ul class="level-right nav-list">
@@ -24,25 +39,12 @@
           <li><a href="#top-attractions">Top Attractions</a></li>
         </ul>
       </nav> -->
-      <div id="navbarMenuHeroA" class="navbar-menu">
-        <div class="navbar-end">
-          <a class="navbar-item" href="#home">
-            Home
-          </a>
-          <a class="navbar-item" href="#about">
-            About
-          </a>
-          <a class="navbar-item" href="#top-attractions">
-            Top Attractions
-          </a>
-          
-        </div>
-      </div>
-      <h1 class="is-size-1 level-center">Houston Hot Spots</h1>
+     
+      <h1 class="is-size-1 level-center" style="font-family: 'Roboto Condensed', serif;">Houston Hot Spots</h1>
 
     </div>
   </div>
-  <div>
+  <div class="columns p-3 is-flex-direction-row is-justify-content-space-around">
     <div class="column is-4 block" id="home">
       <form id="search-form" class="control is-small">
         <div class="form-label">
@@ -91,7 +93,7 @@
                 Museums
               </label>
               <label class="radio user-select">
-                <input type="checkbox" name="urban_enviornment">
+                <input type="checkbox" name="urban_environment">
                 Parks
               </label>
               <label class="radio user-select">
@@ -120,63 +122,80 @@
 
         <div class="control">
           <button class="button is-info" id="submit-btn">Submit</button>
+          
+        </div>
+        <div id="results">
+
         </div>
       </form>
 
     </div>
-    <div id="results">
-
+    <div class="weather-box">
+      <img src="./assets/images/weather_placeholder.png" alt="">
     </div>
+    
   </div>  
   <container class="pt-4">
     <div class="columns p-3">
       <div class="about column is-one-half">
         <h2 id="about" class="is-size-3 has-text-weight-bold">About</h2>
-        <p class="is-size-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore
-          et dolore magna aliqua. Vulputate mi sit amet mauris commodo. Tempus egestas sed sed risus pretium.
-          Consectetur libero id faucibus nisl tincidunt. Sit amet luctus venenatis lectus magna fringilla urna
-          porttitor rhoncus. Nam aliquam sem et tortor. Lacus suspendisse faucibus interdum posuere lorem. Amet
-          purus gravida quis blandit turpis. Sagittis vitae et leo duis ut diam quam nulla porttitor. Ut sem
-          nulla pharetra diam sit amet nisl suscipit. Eu non diam phasellus vestibulum lorem sed risus ultricies.
-          Etiam sit amet nisl purus in mollis nunc sed. Nulla facilisi morbi tempus iaculis urna. Sit amet nisl
-          purus in mollis nunc sed id semper.</p>
+        <p class="is-size-4">Houston is the fourth largest city in the United States and the most populous city in Texas, 
+          famous for its large international community and cultural diversity. There are lots of activities to do, ranging 
+          from a collection of top-rated museums and performing arts organizations, to parks and green spaces, shopping, 
+          sporting events, and a remarkable culinary culture. Depending on the time of the year, you may be able to enjoy 
+          the Livestock Show and Rodeo, or participate in the most anticipated foodie event of the year - Houston Restaurant 
+          Weeks. Below, you will find some of the top rated attractions in Houston. With so much to do, it can be overwhelming 
+          to find something to do. Houston Hot Spots is the place to go to find current events, shopping, dining, parks, hotels, 
+          attractions, and other things to do in the city. For a complete look at  things, select an item above to view more 
+          items.</p>
       </div>
-      <div class="column">
-        <img src="./assets/images/skyline-TESTONLY.jpeg" alt="Houston-skyline">
-        <figcaption>The beautiful Houston skyline</figcaption>
+      <div class="column skyline">
+        <p><a href="https://commons.wikimedia.org/wiki/File:Buildings-city-houston-skyline-1870617.jpg#/media/File:Buildings-city-houston-skyline-1870617.jpg">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Buildings-city-houston-skyline-1870617.jpg/1200px-Buildings-city-houston-skyline-1870617.jpg" alt="Buildings-city-houston-skyline-1870617.jpg"></a>
+          <figcaption>The beautiful Houston skyline</figcaption>
+          <p>By Jason Villanueva - <a rel="nofollow" class="external free" href="https://www.pexels.com/photo/buildings-city-houston-skyline-1870617/">link</a>, 
+          <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" title="Creative Commons Zero, Public Domain Dedication">CC0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=87896226">Link</a></p>
+        <!-- <img src="./assets/images/skyline-TESTONLY.jpeg" alt="Houston-skyline">
+        <figcaption>The beautiful Houston skyline</figcaption> -->
       </div>
     </div>
     <div class="columns p-2">
-        <div class="column image-with-caption">
-          <img src="./assets/images/galleriaTESTONLY.jpeg" alt="Galleria">
-          <figcaption>Lots of shopping opportunities in Htown</figcaption>
+        <div class="column galleria">
+          <p><a href="https://commons.wikimedia.org/wiki/File:GalleriaPolarIce.jpg#/media/File:GalleriaPolarIce.jpg">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/GalleriaPolarIce.jpg/1200px-GalleriaPolarIce.jpg" alt="GalleriaPolarIce.jpg"></a>
+            <figcaption>Ice skating at the Galleria</figcaption>
+            <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, 
+            <a href="https://commons.wikimedia.org/w/index.php?curid=99490039">Link</a></p>
+          <!-- <img src="./assets/images/galleriaTESTONLY.jpeg" alt="Galleria">
+          <figcaption>Lots of shopping opportunities in Htown</figcaption> -->
         </div>
         <div id="top-attractions" class="attractions column is-one-half p-6">
           <h2 class="is-size-3 has-text-weight-bold">Top Attractions</h2>
-          <p class="is-size-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et
-            dolore magna aliqua. Quis viverra nibh cras pulvinar mattis nunc sed. Cursus eget nunc scelerisque
-            viverra mauris in aliquam sem fringilla. Viverra tellus in hac habitasse platea dictumst. Vel elit
-            scelerisque mauris pellentesque pulvinar pellentesque habitant. Ante metus dictum at tempor commodo
-            ullamcorper a. Adipiscing vitae proin sagittis nisl rhoncus. Venenatis tellus in metus vulputate.
-            Nulla aliquet enim tortor at auctor urna nunc id. Ultrices vitae auctor eu augue ut lectus arcu bibendum.
-            Proin sagittis nisl rhoncus mattis rhoncus urna. </p>
-    
-          <p class="is-size-4">A lacus vestibulum sed arcu non odio. Accumsan tortor posuere ac ut. Tincidunt eget nullam
-            non nisi.
-            Ornare massa eget egestas purus viverra accumsan in nisl. Urna nunc id cursus metus aliquam. Porta
-            lorem mollis aliquam ut porttitor leo a diam. Potenti nullam ac tortor vitae. Faucibus a pellentesque
-            sit amet porttitor eget. Dui nunc mattis enim ut tellus. Pharetra sit amet aliquam id diam. Eu turpis
-            egestas pretium aenean. Sapien faucibus et molestie ac feugiat sed. Gravida quis blandit turpis cursus
-            in. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum integer. Dictum at tempor commodo
-            ullamcorper.</p>
+          <p class="is-size-4">Some of the top rated attractions in Houston include - <a href="https://spacecenter.org/"><strong>The 
+            Space Center Houston</strong></a>, a must-see attraction in Houston and the official visitor center of NASA’s Johnson Space 
+            Center. It offers extensive science education programs and a space museum that is fun for all ages. The 
+            <a href="https://houmuse.org "><strong>Museum District</strong></a> is home to 19 museums, of which 10 are free to the public. 
+            Most are within easy walking distance of each other, and cover everything from nature, art, history, science and more. Some of 
+            the highlights include - Museum of Fine Arts, Houston Museum of Natural Science, Children’s Museum of Houston, and Menil Collection. 
+            <a href="https://www.simon.com/mall/the-galleria"><strong>The Galleria Mall</strong></a> is the largest mall in Texas. There is an 
+            abundant array of shopping choices, fine dining options, hotels, and an ice skating rink. <a href="https://www.houstonzoo.org/"><strong>
+            Houston Zoo</strong></a> is home to over 6000 exotic and indigenous animals from all over the globe and is the second most visited zoo 
+            in the United States. It is located within Hermann Park, another top attraction to checkout. <a href="https://www.hermannpark.org">
+            <strong>Hermann Park</strong></a> is a 445 acre urban park with lots of things to do and see including a Japanese Garden, Friendship Pavilion, 
+            a golf course, miniature train, Miller Outdoor Theatre, McGovern Centennial Garden, sculpture walk, lakes, fountains, pedal boats and trails. 
+            <a href="https://uptown-houston.com/experience/parks/waterwall-park/"><strong>The Gerald D. Hines Waterwall Park</strong></a> is a 64-ft high 
+            semi-circular water wall and one of the most visited attractions in Houston. It is great for a photo op. The <a href="https://www.rodeohouston.com"><strong>
+            Houston Livestock Show and Rodeo</strong></a> is the world’s largest rodeo and livestock exhibition. It is an annual event that typically 
+            happens around February and March. There are nightly concerts, an outdoor carnival, horse shows, barbecues, and so much more.  You can also 
+            take a day trip to <a href="https://www.galveston.com"><strong>Galveston</strong></a> and enjoy the beautiful beaches, seaside dining, and visit 
+            Moody Gardens or the Pleasure Pier. 
+ </p>
         </div>
       </div>  
   </container>
   <footer class="footer has-text-centered">
-    <p>Copyright©️ 2023 team1</p>
-    <i class="fa-brands fa-github"></i>
+    <p>&copy;Copyright© 2023 team1</p>
+    <a href="https://github.com/jomaduagwu/team-project"><i class="fa-brands fa-github"></i></a>
   </footer>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

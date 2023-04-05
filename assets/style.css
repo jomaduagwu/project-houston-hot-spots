@@ -9,7 +9,7 @@
 
 body {
     background-color: var(--orange);
-    
+    font-family: 'Roboto', serif;
 }
 
 h1 {
@@ -66,3 +66,4 @@ h2 {
 .skyline {
     margin-top: 60px;
 }
+

@@ -54,6 +54,11 @@ h2 {
     color: white;
 }
 
+#map {
+    height: 400px;
+    width: 100%;
+}
+
 /* .weather-box {
     padding-left: 18rem;
 } */

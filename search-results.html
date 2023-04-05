@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,101 +37,98 @@
           <li><a href="#top-attractions">Top Attractions</a></li>
         </ul>
       </nav> -->
-     
-      <h1 class="is-size-1 level-center">Houston Hot Spots</h1>
-
-    </div>
-  </div>
-  <div class="column is-4 block" id="home">
-    <form id="search-form" class="control is-small">
-      <div class="form-label">
-        <p class="is-size-3">The fun starts HERE</p>
-      </div>
-      <!-- <div class="control block">
-        <input id="datepicker" class="input" type="text" placeholder="MM/DD/YYYY">
-      </div> -->
-      <div class="select user-locate">
-        <select>
-          <option>What part of town are you going to?</option>
-          <option value="central">Central Houston</option>
-          <option value="north">North Houston</option>
-          <option value="west">West Houston</option>
-          <option value="south">South Houston</option>
-          <option value="east">East Houston</option>
-          <option value="galveston">Galveston</option>
-        </select>
-      </div>
-
-      <div class="control block">
-        <div class="">
-          <!-- <select>
-            <option>What are you looking for?</option>
-            <option value="food">Food</option>
-            <option value="bars">Bars</option>
-            <option value="events">Events</option>
-            <option value="parks">Parks</option>
-            <option value="sports">Sports</option>
-            <option value="shopping">Shopping</option>
-            <option value="hotels">Hotels</option>
-            <option value="attractions">Attractions</option>
-            <option value="things-to-do">Things To Do</option>
-          </select> -->
-          <div class="control" id="user-choices">
-            <label class="radio user-select">
-              <input type="checkbox" name="food">
-              Food
-            </label>
-            <label class="radio user-select">
-              <input type="checkbox" name="bars">
-              Bars
-            </label>
-            <label class="radio user-select">
-              <input type="checkbox" name="events">
-              Events
-            </label>
-            <label class="radio user-select">
-              <input type="checkbox" name="parks">
-              Parks
-            </label>
-            <label class="radio user-select">
-              <input type="checkbox" name="sports">
-              Sports
-            </label>
-            <label class="radio user-select">
-              <input type="checkbox" name="shopping">
-              Shopping
-            </label>
-            <label class="radio user-select">
-              <input type="checkbox" name="hotels">
-              Hotels
-            </label>
-            <label class="radio user-select">
-              <input type="checkbox" name="attractions">
-              Attractions
-            </label>
-            <label class="radio user-select">
-              <input type="checkbox" name="things-to-do">
-              Things to do
-            </label>
-          </div>
+      <div id="navbarMenuHeroA" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="#home">
+            Home
+          </a>
+          <a class="navbar-item" href="#about">
+            About
+          </a>
+          <a class="navbar-item" href="#top-attractions">
+            Top Attractions
+          </a>
+          
         </div>
       </div>
-
-      <div class="control">
-        <button class="button is-info" id="submit-btn">Submit</button>
-      </div>
-    </form>
-
-  </div>
-    <div class="column">
-      <h2 class="is-size-2">Showing results for <span id="result-text"></span></h2>
-      <div id="result-content">
-        <ul id="result-list" class="search-result-list ">
-
-
-        </ul>
-      </div>
+      <h1 class="is-size-1 level-center">Houston Hot Spots</h1>
     </div>
+  </div>
+
+  <div class="columns">
+    <div class="column is-4 block" id="home">
+      <form id="search-form" class="control is-small">
+        <div class="form-label">
+          <p class="is-size-3">The fun starts HERE</p>
+        </div>
+        <!-- <div class="control block">
+          <input id="datepicker" class="input" type="text" placeholder="MM/DD/YYYY">
+        </div> -->
+        <div class="select user-locate">
+          <select id="drop-down">
+            <option>What part of town are you going to?</option>
+            <option value="lon=-95.3632&lat=29.7662">Central Houston</option>
+            <option value="lon=-95.4268&lat=30.0084">North Houston</option>
+            <option value="lon=-95.5625&lat=29.8339">West Houston</option>
+            <option value="lon=-95.3853&lat=29.5961">South Houston</option>
+            <option value="lon=-95.1500&lat=29.7112">East Houston</option>
+            <option value="lon=-94.9226&lat=29.3222">Galveston</option>
+          </select>
+        </div>
+
+        <div class="control block" id="user-choices-container">
+          <label class="radio user-select">
+            <input type="checkbox" name="restaurants">
+            Food
+          </label>
+          <label class="radio user-select">
+            <input type="checkbox" name="bars">
+            Bars
+          </label>
+          <label class="radio user-select">
+            <input type="checkbox" name="museums">
+            Museums
+          </label>
+          <label class="radio user-select">
+            <input type="checkbox" name="urban_enviornment">
+            Parks
+          </label>
+          <label class="radio user-select">
+            <input type="checkbox" name="sport">
+            Sports
+          </label>
+          <label class="radio user-select">
+            <input type="checkbox" name="shops">
+            Shopping
+          </label>
+          <label class="radio user-select">
+            <input type="checkbox" name="hotels">
+            Hotels
+          </label>
+          <label class="radio user-select">
+            <input type="checkbox" name="cultural">
+            Attractions
+          </label>
+          <label class="radio user-select">
+            <input type="checkbox" name="amusements">
+            Things to do
+          </label>
+        </div>
+
+        <div class="control">
+          <button class="button is-info" id="submit-btn">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="column is-8">
+      <div id="map"></div>
+    </div>
+  </div>
+
+  <div class="column">
+    <h2 class="is-size-2">Showing results for <span id="result-text"></span></h2>
+    <div id="result-content"></div>
   </div>
 
   <footer class="footer has-text-centered">
@@ -143,6 +139,10 @@
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="./display-search.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFqS5W2P0ywzvjzmogjlrnHxUgXJcyFi4&callback=initMap">
+    </script>
+
 </body>
 
 </html>

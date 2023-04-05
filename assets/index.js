@@ -213,7 +213,7 @@ function getForecast() {
     list2.appendChild(forHumEl2);
     list2.appendChild(forWindEl2);
     
-    forIconEl2.src =  "https://openweathermap.org/img/wn/" + data[0].weather[0].icon + ".png";
+    forIconEl2.src =  "https://openweathermap.org/img/wn/" + data[1].weather[0].icon + ".png";
     var highTemp = "Temp: " + Math.round(data[1].main.temp) + "°F";
     var humForecast = "Humidity: " + data[1].main.humidity + "%";
     var windForecast = "Winds: " + Math.round(data[1].wind.speed) + " MPH";
@@ -233,7 +233,7 @@ function getForecast() {
     list3.appendChild(forHumEl3);
     list3.appendChild(forWindEl3);
 
-    forIconEl3.src =  "https://openweathermap.org/img/wn/" + data[0].weather[0].icon + ".png";
+    forIconEl3.src =  "https://openweathermap.org/img/wn/" + data[1].weather[0].icon + ".png";
     var highTemp = "Temp: " + Math.round(data[2].main.temp) + "°F";
     var humForecast = "Humidity: " + data[2].main.humidity + "%";
     var windForecast = "Winds: " + Math.round(data[2].wind.speed) + " MPH";

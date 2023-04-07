@@ -5,28 +5,6 @@ const checkBox = document.querySelectorAll('input');
 const resultTextElement = document.getElementById("result-text");
 const resultContentEl = document.querySelector('#result-content');
 
-const locations = {
-    Houston: { lat: 29.7604, lon: -95.3698},
-    central: { lat: 29.7662, lon: -95.3632 },
-    north: { lat: 30.0084, lon: -95.4268 },
-    west: { lat: 29.8339, lon: -95.5625 },
-    south: { lat: 29.5961, lon: -95.3853 },
-    east: { lat: 29.7112, lon: -95.1500 },
-    galveston: { lat: 29.3222, lon: -94.9226 }
-  };
-
-const checkboxes = [
-    { name: 'food', label: 'Food' },
-    { name: 'bars', label: 'Bars' },
-    { name: 'events', label: 'Events' },
-    { name: 'parks', label: 'Parks' },
-    { name: 'sports', label: 'Sports' },
-    { name: 'shopping', label: 'Shopping' },
-    { name: 'accomodations', label: 'Hotels' },
-    { name: 'attractions', label: 'Attractions' },
-    { name: 'things-to-do', label: 'Things to do' }
-  ];
-
 let map;
 
 apiKey = '5ae2e3f221c38a28845f05b6fc7cd900dbdfe52e778e3a8d9a518c53'
@@ -59,11 +37,24 @@ function handleSearchFormSubmit(event) {
 function getParams() {
 
     var searchParamsArr = document.location.search;
-    var userLocation = searchParamsArr.split('location=')[1];
-    userLocation = userLocation.substring(0, 24);
-    var userSelected = searchParamsArr.split('selected=')[1];
 
-    getData(userLocation, userSelected);
+    if (searchParamsArr) {
+        var userLocation = searchParamsArr.split('location=')[1];
+        userLocation = userLocation.substring(0, 24);
+        var userSelected = searchParamsArr.split('selected=')[1];
+
+        getData(userLocation, userSelected);
+
+        let selectedOptionText = ''
+
+        for (let i = 0; i < dropDown.options.length; i++) {
+            if (userLocation === dropDown.options[i].value) {
+                selectedOptionText = dropDown.options[i].textContent;
+            }
+        }
+
+        resultTextElement.textContent = selectedOptionText;
+    }
 }
 
 function addMarkers(resultObj, map) {
@@ -85,7 +76,7 @@ function addMarkers(resultObj, map) {
 function printResults(resultObj) {
 
     console.log(resultObj);
-      var resultCard = document.createElement('div');
+    var resultCard = document.createElement('div');
     resultCard.classList.add('card', 'bg-light', 'text-dark', 'mb-3', 'p-3');
   
     var resultBody = document.createElement('div');
@@ -174,6 +165,7 @@ function getData(userLocation, userSelected) {
             return response.json();
         })
         .then(function (data) {
+            console.log(data);
             resultContentEl.textContent = '';
 
             userLocation = userLocation.split('&'); 
@@ -182,16 +174,16 @@ function getData(userLocation, userSelected) {
             let lon_coords = userLocation[0].split('=')[1];
         
             let options = {
-                zoom: 12,
+                zoom: 11,
                 center: {lat:parseFloat(lat_coords), lng:parseFloat(lon_coords)}
             }
         
-            var map = new google.maps.Map(document.getElementById('map'), options);
+            var map = new google.maps.Map(document.getElementById('map'), options);  
 
             for (var i = 0; i < 5; i++) {
-                // This loops through the first five above and attaches to the next fetch
-                // var featureName = data.features[i].properties.name;
-                var xid = data.features[i].properties.xid;
+
+                var randomIndex = Math.floor(Math.random() * data.features.length);
+                var xid = data.features[randomIndex].properties.xid;
 
                 // open trip api for detailed info
                 var xidUrl = 'https://api.opentripmap.com/0.1/en/places/xid/' + xid + '?apikey=' + apiKey;

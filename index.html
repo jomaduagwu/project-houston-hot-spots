@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <!-- header section - Navbar -->
   <div class="hero header is-small">
     <div id="navbarMenuHeroA" class="navbar-menu">
       <nav class="navbar-end">
@@ -31,28 +32,23 @@
         
       </nav>
     </div>
+        <!-- Header section - Title -->
     <div class="hero-body">
-      <!-- <nav class="navbar-end is-fixed-top level">
-        <ul class="level-right nav-list">
-          <li><a href="#Home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#top-attractions">Top Attractions</a></li>
-        </ul>
-      </nav> -->
+     
      
       <h1 class="level-center" style="font-family: 'Roboto Condensed', serif;">Houston Hot Spots</h1>
 
     </div>
   </div>
+
+        <!-- Search box with dropdown and check -->
   <div class="columns p-3 is-flex-direction-row is-justify-content-space-around">
     <div class="column is-4 block" id="home">
       <form id="search-form" class="control is-small">
         <div class="form-label">
           <p class="is-size-3">The fun starts HERE</p>
         </div>
-        <!-- <div class="control block">
-          <input id="datepicker" class="input" type="text" placeholder="MM/DD/YYYY">
-        </div> -->
+       <!-- dropdown menu -->
         <div class="select user-locate">
           <select id="drop-down">
             <option value="">What part of town are you going to?</option>
@@ -64,21 +60,10 @@
             <option value="lon=-94.9226&lat=29.3222">Galveston</option>
           </select>
         </div>
-
+          <!-- Checkboxes -->
         <div class="control block">
           <div class="">
-            <!-- <select>
-              <option>What are you looking for?</option>
-              <option value="food">Food</option>
-              <option value="bars">Bars</option>
-              <option value="events">Events</option>
-              <option value="parks">Parks</option>
-              <option value="sports">Sports</option>
-              <option value="shopping">Shopping</option>
-              <option value="hotels">Hotels</option>
-              <option value="attractions">Attractions</option>
-              <option value="things-to-do">Things To Do</option>
-            </select> -->
+            
             <div class="control" id="user-choices">
               <label class="radio user-select">
                 <input type="checkbox" name="restaurants">
@@ -130,6 +115,7 @@
       </form>
 
     </div>
+      <!-- Weather section with current and three day -->
     <div class="weather-box columns has-background-info">
       <div id="current-wx" class="column">
         <h2 id="inner">

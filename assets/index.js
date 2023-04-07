@@ -150,7 +150,7 @@ function getCurrent() {
 
 getCurrent();
 getForecast();
-// gets api information for 5 day forecast and displays it on the screen
+// gets api information for 3 day forecast and displays it on the screen
 
 function getForecast() {
     var forecastUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&units=imperial&appid=' + apiKey;

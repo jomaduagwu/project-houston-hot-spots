@@ -6,9 +6,9 @@ checkBox.type = 'checkbox';
 var selected = [];
 var searchTerm = selected.join();
 dropDown = document.querySelector('#drop-down');
-// open trip
+// open trip api key
 apiKey = '5ae2e3f221c38a28845f05b6fc7cd900dbdfe52e778e3a8d9a518c53'
-// open trip
+// open trip api URL
 apiUrl = 'http://api.opentripmap.com/0.1/ru/places/bbox?lon_min=-95.358421&lat_min=29.749907&lon_max=-95.372809&lat_max=29.859052&kinds=churches&format=geojson&apikey='
 openTrip = 'https://api.opentripmap.com/0.1/en/places/radius?radius=32186&lon=-95.3632&lat=29.7662&kinds=' + searchTerm + '&rate=1&limit=50&apikey=' + apiKey;
 var results = document.getElementById('results');
@@ -21,9 +21,9 @@ var results = document.getElementById('results');
 // checkbox query
 submitBtn.addEventListener('click', function(event) {
      event.preventDefault();
-    //  var userDrop = dropDown.value;
+    
     var userLocation = dropDown.value;
-    console.log(userLocation);
+    
     
     selected = [];
     for (i=0; i < 9; i++) {
@@ -34,7 +34,7 @@ submitBtn.addEventListener('click', function(event) {
        
      }
     
-     console.log(selected.join());
+     
     
      var queryString = './search-results.html?location=' + userLocation + '&selected=' + selected;
      location.assign(queryString);
@@ -57,7 +57,7 @@ fetch(openTrip)
         return response.json();
     })
     .then(function (data) {
-        console.log(data)
+       
         for (var i = 0; i < 5; i++) {
             // This loops through the first five above and attaches to the next fetch
             var featureName = data.features[i].properties.name;
@@ -101,7 +101,7 @@ var lon = "-95.3632";
 //dayjs to display date on screen
 var now = dayjs();
 
-
+// fetches api weather for current conditions
 function getCurrent() {
     
 
@@ -113,8 +113,7 @@ function getCurrent() {
         return response.json();
     })
     .then(function (data) {
-        console.log("current")
-        console.log(data);
+        
 
         // object for current info
     var curData = {
@@ -132,18 +131,18 @@ function getCurrent() {
     var curTempEl = document.getElementById('cur-temp');
     var curWindEl = document.getElementById('cur-wind');
     var curHumEl = document.getElementById('cur-hum');
-    // var first = document.getElementById('first');
+   
     curIconEl.src =  "https://openweathermap.org/img/wn/" + curData.curIcon + ".png";
     curTempEl.innerHTML = "Current Temp: " + curData.curTemp + "° F";
     curWindEl.innerHTML = "Winds: " + Math.round(curData.curWind) + " MPH";
     curHumEl.innerHTML = "Humidity: " + curData.curHum + "%";
     inner.innerHTML = data.name + "  "  + data.sys.country + "  " + dayjs().format('(M/D/YYYY)');
-    // first.innerHTML = curData.cityName;
+    
     
        
     });
 }
-
+// calls weather info for box
 getCurrent();
 getForecast();
 // gets api information for 3 day forecast and displays it on the screen
@@ -173,9 +172,7 @@ function getForecast() {
     
 })
 .then(function (data) {
-    console.log("forecast");
-    console.log(data);
-
+   
    
 
         //lists for day 1

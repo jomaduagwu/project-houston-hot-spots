@@ -89,7 +89,7 @@ function printResults(resultObj) {
 
     // resultObj: object selected
 
-    console.log(resultObj);
+   
     var resultCard = document.createElement('div');
     resultCard.classList.add('card', 'bg-light', 'text-dark', 'mb-3', 'p-3');
   
@@ -163,7 +163,7 @@ function selectMap(coords) {
 
     // coords: str, location found in the URL
 
-    console.log(coords);
+   
     let userLocation = coords.split('&');
 
     let lat_coords = userLocation[1].split('=')[1];
@@ -192,7 +192,7 @@ function getData(userLocation, userSelected) {
             return response.json();
         })
         .then(function (data) {
-            console.log(data);
+            
             resultContentEl.textContent = '';
 
             userLocation = userLocation.split('&'); 

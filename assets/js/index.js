@@ -15,18 +15,15 @@ var results = document.getElementById('results');
 
 // api - opentrip documentation = https://opentripmap.io/docs
 
-//datepicker
-// $( function() {
-//     $( "#datepicker" ).datepicker();
-//   } );
+
 
 
 // checkbox query
 submitBtn.addEventListener('click', function(event) {
      event.preventDefault();
     //  var userDrop = dropDown.value;
-    var location = dropDown.value;
-    console.log(location);
+    var userLocation = dropDown.value;
+    console.log(userLocation);
     
     selected = [];
     for (i=0; i < 9; i++) {
@@ -39,10 +36,9 @@ submitBtn.addEventListener('click', function(event) {
     
      console.log(selected.join());
     
-     var result = document.createElement('a')
-     result.setAttribute('href', './search-results.html?location=' + location + '&selected=' + selected);
-     result.textContent = "Click here for results";
-    results.appendChild(result);
+     var queryString = './search-results.html?location=' + userLocation + '&selected=' + selected;
+     location.assign(queryString);
+    
 });
 
 //   getData();

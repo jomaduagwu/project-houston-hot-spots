@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <div class="hero header">
+  <div class="hero header is-small">
     <div id="navbarMenuHeroA" class="navbar-menu">
       <nav class="navbar-end">
         <a class="navbar-item" href="#home">
@@ -40,7 +40,7 @@
         </ul>
       </nav> -->
      
-      <h1 class="is-size-1 level-center" style="font-family: 'Roboto Condensed', serif;">Houston Hot Spots</h1>
+      <h1 class="level-center" style="font-family: 'Roboto Condensed', serif;">Houston Hot Spots</h1>
 
     </div>
   </div>
@@ -105,7 +105,7 @@
                 Shopping
               </label>
               <label class="radio user-select">
-                <input type="checkbox" name="hotels">
+                <input type="checkbox" name="accomodations">
                 Hotels
               </label>
               <label class="radio user-select">
@@ -130,8 +130,35 @@
       </form>
 
     </div>
-    <div class="weather-box">
-      <img src="./assets/images/weather_placeholder.png" alt="">
+    <div class="weather-box columns has-background-info">
+      <div id="current-wx" class="column">
+        <h2 id="inner">
+
+        </h2>
+        <img id="cur-icon" src="" alt="">
+        <h5 id="cur-temp"></h5>
+        <h5 id="cur-wind"></h5>
+        <h5 id="cur-hum"></h5>
+
+      </div>
+      
+      <div id="fore-wx" class="">
+        <div>
+          <h2 class="is-size-3 has-text-centered column">Three Day Forecast</h2>
+        </div>
+        <div class="columns">
+          <div id="day1" class="column">
+            <ul id="list-day1"></ul>
+          </div>
+          <div id="day2" class="column">
+            <ul id="list-day2"></ul>
+          </div>
+          <div id="day3" class="column">
+            <ul id="list-day3"></ul>
+          </div>
+        </div>
+      </div>
+      <!-- <img src="./assets/images/weather_placeholder.png" alt=""> -->
     </div>
     
   </div>  
@@ -197,6 +224,8 @@
     <p>&copy;Copyright© 2023 team1</p>
     <a href="https://github.com/jomaduagwu/team-project"><i class="fa-brands fa-github"></i></a>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="./assets/index.js"></script>

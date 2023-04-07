@@ -75,7 +75,7 @@ function addMarkers(resultObj, map) {
     })
 
     var infoWindow = new google.maps.InfoWindow({
-        content: '<h1>' + resultObj.name + '</h1>'
+        content: '<h2 style="color: red; font-size: 20px; font-weight: bold;">' + resultObj.name + '</h2>'
     });
 
     marker.addListener('click', function() {

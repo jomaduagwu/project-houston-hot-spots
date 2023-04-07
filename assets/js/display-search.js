@@ -103,6 +103,8 @@ function printResults(resultObj) {
     var bodyContentEl = document.createElement('p');
     bodyContentEl.innerHTML =
       '<strong>Name:</strong> ' + resultObj.name + '<br/>';
+    bodyContentEl.innerHTML +=
+      '<strong>Address:</strong> ' + resultObj.address.house_number + ' ' + resultObj.address.road + '<br/>';
   
     if (resultObj.kinds) {
       bodyContentEl.innerHTML +=

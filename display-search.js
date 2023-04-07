@@ -22,7 +22,7 @@ const checkboxes = [
     { name: 'parks', label: 'Parks' },
     { name: 'sports', label: 'Sports' },
     { name: 'shopping', label: 'Shopping' },
-    { name: 'hotels', label: 'Hotels' },
+    { name: 'accomodations', label: 'Hotels' },
     { name: 'attractions', label: 'Attractions' },
     { name: 'things-to-do', label: 'Things to do' }
   ];

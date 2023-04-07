@@ -1,4 +1,5 @@
 
+// Initialization of variables 
 const submitBtnEl = document.querySelector("#submit-btn");
 const dropDown = document.getElementById("drop-down");
 const checkBox = document.querySelectorAll('input');
@@ -9,7 +10,10 @@ let map;
 
 apiKey = '5ae2e3f221c38a28845f05b6fc7cd900dbdfe52e778e3a8d9a518c53'
 
+
 function handleSearchFormSubmit(event) {
+
+    // This function is the event listener of the submit button when clicked 
 
     event.preventDefault();
 
@@ -36,6 +40,7 @@ function handleSearchFormSubmit(event) {
 
 function getParams() {
 
+    // This function gets the search params out of the URL and converts it in to an array
     var searchParamsArr = document.location.search;
 
     if (searchParamsArr) {
@@ -59,6 +64,11 @@ function getParams() {
 
 function addMarkers(resultObj, map) {
 
+    // This function adds markers to the map to be displayed
+
+    // resultObj: selected object
+    // map: map element 
+
     var marker = new google.maps.Marker({
         position:{lat:resultObj.point.lat, lng:resultObj.point.lon},
         map: map
@@ -74,6 +84,10 @@ function addMarkers(resultObj, map) {
 }
 
 function printResults(resultObj) {
+
+    // This function generates <div> elements that holds the result content
+
+    // resultObj: object selected
 
     console.log(resultObj);
     var resultCard = document.createElement('div');
@@ -129,6 +143,8 @@ function printResults(resultObj) {
 
 function initMap() {
 
+    // This function generates the map upon load
+
     let Houston_lat = 29.7604;
     let Houston_lon = -95.3698;
 
@@ -140,6 +156,10 @@ function initMap() {
 }
 
 function selectMap(coords) {
+
+    // This function locates the area selected
+
+    // coords: str, location found in the URL
 
     console.log(coords);
     let userLocation = coords.split('&');
@@ -157,6 +177,11 @@ function selectMap(coords) {
 
 
 function getData(userLocation, userSelected) {
+
+    // This function makes API requests based on the location and selected categories
+
+    // userLocation: str, location based on the URL
+    // userSelected: str, selected (checked) categories
 
     openTrip = 'https://api.opentripmap.com/0.1/en/places/radius?radius=32186&' + userLocation + '&kinds=' + userSelected + '&rate=1&limit=50&apikey=' + apiKey;
 
@@ -199,6 +224,7 @@ function getData(userLocation, userSelected) {
 
         });
 };
+
 
 submitBtnEl.addEventListener('click', handleSearchFormSubmit);
 

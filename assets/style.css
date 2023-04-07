@@ -15,11 +15,21 @@ body {
 h1 {
     color: var(--red);
     text-align: center;
-}
+    font-size: 4rem;
+    font-weight: bold;
+  }
 
 h2 {
     color: black;
 }
+
+.weather-box {
+    margin-top: 10px;
+    
+    /* background-color: white; */
+  
+    
+  }
 
 .header {
     background-color: var(--blue);

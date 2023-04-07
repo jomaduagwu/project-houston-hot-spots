@@ -28,7 +28,7 @@ The layout of this application is optimized for different screen sizes.
 
 ![Houston Hot Spots Home page](assets/images/houston-hot-spots-home.png)
 
-![Houston Hot Spots Display page](assets/images/houston-hot-spots-home.png)
+![Houston Hot Spots Display page](assets/images/houston-hot-spots-display.png)
 
 
 Link to deployed website - https://jomaduagwu.github.io/team-project/

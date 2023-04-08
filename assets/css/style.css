@@ -23,21 +23,7 @@ h2 {
     color: black;
 }
 
-.weather-box {
-    margin-top: 10px;
-    
-    /* background-color: white; */
-  
-    
-  }
-
-.header {
-    background-color: var(--blue);
-}
-
-.form-label {
-    color: black;
-}
+/* CSS by ID - search form and weather box*/
 
 #search-form {
     background-color: var(--red);
@@ -47,8 +33,21 @@ h2 {
     text-decoration: none;
 }
 
-.user-locate {
-    margin-bottom: 1.3rem;
+#current-wx {
+    line-height: 2rem;
+}
+
+/* CSS for map on display search page only */
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+/* CSS by class - header and navbar */
+
+.header {
+    background-color: var(--blue);
 }
 
 .nav-list li {
@@ -59,19 +58,32 @@ h2 {
     color: white;
 }
 
-.footer {
-    background-color: var(--blue);
-    color: white;
+/* CSS for search form */
+
+.form-label {
+    color: black;
 }
 
-#map {
-    height: 400px;
-    width: 100%;
+.user-locate {
+    margin-bottom: 1.3rem;
 }
 
-/* .weather-box {
-    padding-left: 18rem;
-} */
+/* CSS for wather box */
+
+.weather-box {
+    margin-top: 10px;
+}
+
+.wx-list {
+    
+    color: black;
+}
+
+.cur-cond {
+    color: black;
+}
+
+/* CSS for photo elements */
 
 .galleria {
     max-width: 40%;
@@ -82,7 +94,10 @@ h2 {
     margin-top: 60px;
 }
 
-#current-wx {
-    line-height: 2rem;
+/* CSS for footer */
+
+.footer {
+    background-color: var(--blue);
+    color: white;
 }
 

@@ -77,7 +77,7 @@ Link to deployed website - https://jomaduagwu.github.io/project-houston-hot-spot
 * [Open Trip Map API](https://opentripmap.io/docs)
 * [Open Weather API](https://openweathermap.org/api)
 * [W3 schools](https://www.w3schools.com/)
-* Google maps
+* [Google maps](https://developers.google.com/maps/documentation/javascript)
 * [Wikipedia](www.wikipedia.org) images and text content
 
 

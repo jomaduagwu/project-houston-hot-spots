@@ -25,7 +25,7 @@ and a category of things to do, and be presented with a list of options, informa
 * set up OpenWeatherMap URL and API key to fetch weather data
 * extracted weather data and displayed it on the page 
 * set up GoogleMaps API and API key to fetch data
-* extracted weather data and dislayed it on the page
+* extracted maps data and dislayed it on the page
 
 
 

@@ -41,43 +41,6 @@ submitBtn.addEventListener('click', function(event) {
     
 });
 
-//   getData();
-function getData() {
-fetch(openTrip) 
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        
-    });
-// api - opentrip documentation = https://opentripmap.io/docs
-
-fetch(openTrip) 
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-       
-        for (var i = 0; i < 5; i++) {
-            // This loops through the first five above and attaches to the next fetch
-            var featureName = data.features[i].properties.name;
-            var xid = data.features[i].properties.xid;
-        
-             // open trip api for detailed info
-            var xidUrl = 'https://api.opentripmap.com/0.1/en/places/xid/' + xid + '?apikey=' + apiKey;
-          fetch(xidUrl) 
-          .then(function (response) {
-              return response.json();
-          })
-          .then(function (xid) {
-              console.log(xid)
-      
-            
-    });        
-};  
-          });
-        };
-
         //weather app javascript
         
 
@@ -136,7 +99,7 @@ function getCurrent() {
     curTempEl.innerHTML = "Current Temp: " + curData.curTemp + "° F";
     curWindEl.innerHTML = "Winds: " + Math.round(curData.curWind) + " MPH";
     curHumEl.innerHTML = "Humidity: " + curData.curHum + "%";
-    inner.innerHTML = data.name + "  "  + data.sys.country + "  " + dayjs().format('(M/D/YYYY)');
+    inner.innerHTML = data.name + "  " + dayjs().format('(M/D/YYYY)');
     
     
        
@@ -152,11 +115,7 @@ function getForecast() {
     .then(function (response) {
         if(response.ok) {
         return response.json();
-        } else {
-      
-            alert("please try again");
-        
-        };
+        } 
 })
 .then(function (newData) {
    

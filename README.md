@@ -21,11 +21,14 @@ and a category of things to do, and be presented with a list of options, informa
 ## Tasks Completed
 
 * set up OpenTripMap API URL and API key to fetch data
-* added event listener to submit button to loop through selections and store the values in an array
+* added event listener to submit button to loop through selections and store the   values in an array
 * set up OpenWeatherMap URL and API key to fetch weather data
 * extracted weather data and displayed it on the page 
 * set up GoogleMaps API and API key to fetch data
 * extracted maps data and dislayed it on the page
+* used Bulma CSS library to stylize the site
+* created html with various sections and added images and content
+
 
 
 
@@ -69,7 +72,13 @@ Link to deployed website - https://jomaduagwu.github.io/project-houston-hot-spot
 
 ## References
 
-* 
+* [MDN Docs](https://developer.mozilla.org/en-US/)
+* [Bulma Docs](https://bulma.io/documentation/)
+* [Open Trip Map API](https://opentripmap.io/docs)
+* [Open Weather API](https://openweathermap.org/api)
+* [W3 schools](https://www.w3schools.com/)
+* Google maps
+* [Wikipedia](www.wikipedia.org) images and text content
 
 
 ## License

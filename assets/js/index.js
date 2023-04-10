@@ -142,9 +142,7 @@ function getCurrent() {
        
     });
 }
-// calls weather info for box
-getCurrent();
-getForecast();
+
 // gets api information for 3 day forecast and displays it on the screen
 
 function getForecast() {
@@ -238,5 +236,9 @@ function getForecast() {
     });
 
 };
+
+// calls weather info for box
+getCurrent();
+getForecast();
 
     
